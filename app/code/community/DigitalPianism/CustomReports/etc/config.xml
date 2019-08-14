@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config>
+	<modules> 
+		<FactoryX_CustomReports> 
+			<version>0.0.12</version> 
+		</FactoryX_CustomReports> 
+	</modules>
+	
+	<frontend>
+		<!-- Translation file -->
+		<translate>
+            <modules>
+                <FactoryX_CustomReports>
+                    <files>
+                        <default>FactoryX_CustomReports.csv</default>
+                    </files>
+                </FactoryX_CustomReports>
+            </modules>
+        </translate>
+	</frontend>
+	
+	<adminhtml>
+		<!-- Backend translation file -->
+        <translate>
+            <modules>
+                <FactoryX_CustomReports>
+                    <files>
+                        <default>FactoryX_CustomReports.csv</default>
+                    </files>
+                </FactoryX_CustomReports>
+            </modules>
+        </translate>
+    </adminhtml>
+	
+	<global>
+		<models>
+			<reports_resource>
+				<rewrite>
+					<!-- Mage_Reports_Model_Resource_Product_Collection -->
+					<product_collection>FactoryX_CustomReports_Model_Reports_Resource_Product_Collection</product_collection>
+				</rewrite>
+			</reports_resource>
+		</models>
+		
+		<blocks>
+			<customreports>
+				<class>FactoryX_CustomReports_Block</class>
+			</customreports>
+		</blocks>
+	</global>
+	
+	<admin>
+    	<routers>
+			<customreports>
+				<use>admin</use>
+				<args>
+					<module>FactoryX_CustomReports</module>
+					<frontName>customreports</frontName>
+				</args>
+			</customreports>
+        </routers>
+    </admin>
+</config>

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/DigitalPianism_CustomReports",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Adds several custom reports to Magento.",
+    "authors": [
+    {
+        "name": "Digital Pianism",
+        "email": "contact@digital-pianism.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
