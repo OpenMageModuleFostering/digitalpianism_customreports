@@ -18,8 +18,14 @@ class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtm
 		// If the sku is not set
 		if (!$sku)
 		{
-			// We get the sku by loading the product
-			$sku = Mage::getModel('catalog/product')->load($args['row']['entity_id'])->getSku();
+			// We get the sku
+            $collection = Mage::getResourceModel('catalog/product_collection')
+                    ->addFieldToFilter('entity_id', array($args['row']['entity_id']))
+                    ->addAttributeToSelect(array('sku'))
+                    ->setPageSize(1);
+
+            $sku = $collection->getFirstItem()->getSku();
+			
 			// If there's still no sku
 			if (!$sku)
 			{
@@ -30,8 +36,14 @@ class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtm
 		// If the name is not set
 		if (!$name)
 		{
-			// We get the name by loading the product
-			$name = Mage::getModel('catalog/product')->load($args['row']['entity_id'])->getName();
+			// We get the name
+            $collection = Mage::getResourceModel('catalog/product_collection')
+                    ->addFieldToFilter('entity_id', array($args['row']['entity_id']))
+                    ->addAttributeToSelect(array('name'))
+                    ->setPageSize(1);
+
+            $name = $collection->getFirstItem()->getName();
+			
 			// If there's still no name
 			if (!$name)
 			{
@@ -68,14 +80,24 @@ class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtm
 			// If the sku is not set
 			if (!$sku)
 			{
-				// We get the sku by loading the product
-				$sku = Mage::getModel('catalog/product')->load($args['row']['entity_id'])->getSku();
+				// We get the sku
+                $collection = Mage::getResourceModel('catalog/product_collection')
+                        ->addFieldToFilter('entity_id', array($args['row']['entity_id']))
+                        ->addAttributeToSelect(array('sku'))
+                        ->setPageSize(1);
+
+                $sku = $collection->getFirstItem()->getSku();
 			}
 			// If the name is not set
 			if (!$name)
 			{
-				// We get the name by loading the product
-				$name = Mage::getModel('catalog/product')->load($args['row']['entity_id'])->getName();
+				// We get the name
+                $collection = Mage::getResourceModel('catalog/product_collection')
+                        ->addFieldToFilter('entity_id', array($args['row']['entity_id']))
+                        ->addAttributeToSelect(array('name'))
+                        ->setPageSize(1);
+
+                $name = $collection->getFirstItem()->getName();
 			}
 			// We fill the array with the data
 			$this->arrayBestSellers[$args['row']['entity_id']] = array(
