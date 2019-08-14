@@ -2,7 +2,7 @@
 /*
  *	Add a method to retrieve the bestsellers correctly
  */
-class FactoryX_CustomReports_Model_Reports_Resource_Product_Collection extends Mage_Reports_Model_Resource_Product_Collection
+class DigitalPianism_CustomReports_Model_Reports_Resource_Product_Collection extends Mage_Reports_Model_Resource_Product_Collection
 {
     /**
      * Add ordered qty's

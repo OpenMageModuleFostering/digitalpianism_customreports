@@ -1,5 +1,5 @@
 <?php
-class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends AW_Advancedreports_Block_Advanced_Bestsellers_Grid
+class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 
     public function __construct()

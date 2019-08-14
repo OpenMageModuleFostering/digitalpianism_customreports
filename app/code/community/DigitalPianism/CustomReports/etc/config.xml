@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <config>
 	<modules> 
-		<FactoryX_CustomReports> 
-			<version>0.0.13</version> 
-		</FactoryX_CustomReports> 
+		<DigitalPianism_CustomReports> 
+			<version>0.0.14</version> 
+		</DigitalPianism_CustomReports> 
 	</modules>
 	
 	<frontend>
 		<!-- Translation file -->
 		<translate>
             <modules>
-                <FactoryX_CustomReports>
+                <DigitalPianism_CustomReports>
                     <files>
-                        <default>FactoryX_CustomReports.csv</default>
+                        <default>DigitalPianism_CustomReports.csv</default>
                     </files>
-                </FactoryX_CustomReports>
+                </DigitalPianism_CustomReports>
             </modules>
         </translate>
 	</frontend>
@@ -23,11 +23,11 @@
 		<!-- Backend translation file -->
         <translate>
             <modules>
-                <FactoryX_CustomReports>
+                <DigitalPianism_CustomReports>
                     <files>
-                        <default>FactoryX_CustomReports.csv</default>
+                        <default>DigitalPianism_CustomReports.csv</default>
                     </files>
-                </FactoryX_CustomReports>
+                </DigitalPianism_CustomReports>
             </modules>
         </translate>
     </adminhtml>
@@ -37,14 +37,14 @@
 			<reports_resource>
 				<rewrite>
 					<!-- Mage_Reports_Model_Resource_Product_Collection -->
-					<product_collection>FactoryX_CustomReports_Model_Reports_Resource_Product_Collection</product_collection>
+					<product_collection>DigitalPianism_CustomReports_Model_Reports_Resource_Product_Collection</product_collection>
 				</rewrite>
 			</reports_resource>
 		</models>
 		
 		<blocks>
 			<customreports>
-				<class>FactoryX_CustomReports_Block</class>
+				<class>DigitalPianism_CustomReports_Block</class>
 			</customreports>
 		</blocks>
 	</global>
@@ -54,7 +54,7 @@
 			<customreports>
 				<use>admin</use>
 				<args>
-					<module>FactoryX_CustomReports</module>
+					<module>DigitalPianism_CustomReports</module>
 					<frontName>customreports</frontName>
 				</args>
 			</customreports>
