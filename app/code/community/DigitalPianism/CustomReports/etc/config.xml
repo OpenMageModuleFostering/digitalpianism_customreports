@@ -2,7 +2,7 @@
 <config>
 	<modules> 
 		<DigitalPianism_CustomReports> 
-			<version>0.1.2</version> 
+			<version>0.1.3</version>
 		</DigitalPianism_CustomReports> 
 	</modules>
 	

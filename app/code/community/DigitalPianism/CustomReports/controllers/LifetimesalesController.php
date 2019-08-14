@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class DigitalPianism_CustomReports_LifetimesalesController
+ */
 class DigitalPianism_CustomReports_LifetimesalesController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()

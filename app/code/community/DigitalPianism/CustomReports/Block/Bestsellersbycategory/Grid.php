@@ -1,17 +1,28 @@
 <?php
+
+/**
+ * Class DigitalPianism_CustomReports_Block_Bestsellersbycategory_Grid
+ */
 class DigitalPianism_CustomReports_Block_Bestsellersbycategory_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 	protected $arrayBestSellers = array();
-	
-	public function __construct()
+
+    /**
+     *
+     */
+    public function __construct()
 	{
 		parent::__construct();
 		$this->setPagerVisibility(false);
 		$this->setFilterVisibility(false);
 		$this->setId('bestsellersbycategoryReportGrid');
 	}
-	
-	public function fillBestsellersArray($args)
+
+    /**
+     * @param $args
+     * @throws Mage_Core_Exception
+     */
+    public function fillBestsellersArray($args)
 	{
 		// Get Product ID
 		$id = $args['row']['entity_id'];
@@ -77,8 +88,12 @@ class DigitalPianism_CustomReports_Block_Bestsellersbycategory_Grid extends Mage
 			}
 		}
 	}
-	
-	protected function _prepareCollection()
+
+    /**
+     * @return $this
+     * @throws Exception
+     */
+    protected function _prepareCollection()
 	{
 		// Get the session
 		$session = Mage::getSingleton('core/session');
@@ -158,7 +173,11 @@ class DigitalPianism_CustomReports_Block_Bestsellersbycategory_Grid extends Mage
 		return $this;
 	}
 
-	protected function _prepareColumns()
+    /**
+     * @return $this
+     * @throws Exception
+     */
+    protected function _prepareColumns()
 	{
 		 $this->addColumn('name', array(
 			'header'    => Mage::helper('reports')->__('Category Name'),

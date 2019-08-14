@@ -2,6 +2,10 @@
 /*
  *	Add a method to retrieve the bestsellers correctly
  */
+
+/**
+ * Class DigitalPianism_CustomReports_Model_Reports_Resource_Product_Collection
+ */
 class DigitalPianism_CustomReports_Model_Reports_Resource_Product_Collection extends Mage_Reports_Model_Resource_Product_Collection
 {
     /**
@@ -14,7 +18,6 @@ class DigitalPianism_CustomReports_Model_Reports_Resource_Product_Collection ext
     public function addOrderedQtyAndTotal($from = '', $to = '')
     {
         $adapter              = $this->getConnection();
-        $compositeTypeIds     = Mage::getSingleton('catalog/product_type')->getCompositeTypes();
         $orderTableAliasName  = $adapter->quoteIdentifier('order');
 
         $orderJoinCondition   = array(

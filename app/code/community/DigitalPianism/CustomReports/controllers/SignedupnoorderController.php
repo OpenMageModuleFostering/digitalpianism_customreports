@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class DigitalPianism_CustomReports_SignedupnoorderController
+ */
 class DigitalPianism_CustomReports_SignedupnoorderController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()

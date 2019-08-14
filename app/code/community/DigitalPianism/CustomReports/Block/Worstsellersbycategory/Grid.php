@@ -1,8 +1,15 @@
 <?php
+
+/**
+ * Class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid
+ */
 class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 	protected $arrayBestSellers = array();
 
+    /**
+     *
+     */
     public function __construct()
     {
         parent::__construct();
@@ -10,8 +17,11 @@ class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mag
 		$this->setFilterVisibility(false);
         $this->setId('worstsellersbycategoryReportGrid');
     }
-	
-	public function fillBestsellersArray($args)
+
+    /**
+     * @param $args
+     */
+    public function fillBestsellersArray($args)
 	{
 		// We fill the array with the data
 		$this->arrayBestSellers[$args['row']['entity_id']] = array(
@@ -20,8 +30,11 @@ class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mag
 			'product_id'	=>	$args['row']['entity_id']
 		);
 	}
-	
-	public function addMostViewedData($args)
+
+    /**
+     * @param $args
+     */
+    public function addMostViewedData($args)
 	{
 		// If the product has been pushed to the first array
 		// That means it has been sold
@@ -41,7 +54,13 @@ class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mag
 			);
 		}
 	}
-	
+
+    /**
+     * @return $this
+     * @throws Exception
+     * @throws Mage_Core_Exception
+     * @throws Zend_Date_Exception
+     */
     protected function _prepareCollection()
     {
 		// Get the session
@@ -213,6 +232,10 @@ class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mag
         return $this;
     }
 
+    /**
+     * @return $this
+     * @throws Exception
+     */
     protected function _prepareColumns()
     {
          $this->addColumn('name', array(

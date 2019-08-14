@@ -1,8 +1,15 @@
 <?php
+
+/**
+ * Class DigitalPianism_CustomReports_Block_Worstsellers_Grid
+ */
 class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 	protected $arrayBestSellers = array();
 
+    /**
+     *
+     */
     public function __construct()
     {
         parent::__construct();
@@ -10,8 +17,11 @@ class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtm
 		$this->setFilterVisibility(false);
         $this->setId('worstsellersReportGrid');
     }
-	
-	public function fillBestsellersArray($args)
+
+    /**
+     * @param $args
+     */
+    public function fillBestsellersArray($args)
 	{
 		// Get Sku and Name
 		$sku = array_key_exists('sku',$args['row']) ? $args['row']['sku'] : $args['row']['catalog_product.sku'];
@@ -63,8 +73,11 @@ class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtm
 			'product_id'	=>	$args['row']['entity_id']
 		);
 	}
-	
-	public function addMostViewedData($args)
+
+    /**
+     * @param $args
+     */
+    public function addMostViewedData($args)
 	{
 		// If the product has been pushed to the first array
 		// That means it has been sold
@@ -111,7 +124,12 @@ class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtm
 			);
 		}
 	}
-	
+
+    /**
+     * @return $this
+     * @throws Exception
+     * @throws Zend_Date_Exception
+     */
     protected function _prepareCollection()
     {
 		// Get the session
@@ -215,6 +233,10 @@ class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtm
         return $this;
     }
 
+    /**
+     * @return $this
+     * @throws Exception
+     */
     protected function _prepareColumns()
     {
          $this->addColumn('sku', array(

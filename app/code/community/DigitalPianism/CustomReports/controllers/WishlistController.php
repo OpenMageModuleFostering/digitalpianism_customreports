@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class DigitalPianism_CustomReports_WishlistController
+ */
 class DigitalPianism_CustomReports_WishlistController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()

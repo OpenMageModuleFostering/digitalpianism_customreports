@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class DigitalPianism_CustomReports_ShoppedonceController
+ */
 class DigitalPianism_CustomReports_ShoppedonceController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
