@@ -4,8 +4,10 @@ class DigitalPianism_CustomReports_Block_Wishlist extends DigitalPianism_CustomR
     public function __construct()
     {
         parent::__construct();
-        $this->setTemplate('digitalpianism/customreports/grid.phtml');
+        $this->setTemplate('digitalpianism/customreports/advancedgrid.phtml');
 		$this->setTitle('Wishlist Report');
+		// Set the right URL for the form which handles the dates
+		$this->setFormAction(Mage::getUrl('*/*/index'));
     }
 
     public function _beforeToHtml()
