@@ -5,6 +5,11 @@
  */
 class DigitalPianism_CustomReports_SignedupnoorderController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('report/customers/signedupnoorder');
+    }
+
     public function indexAction()
     {
         $this->loadLayout()

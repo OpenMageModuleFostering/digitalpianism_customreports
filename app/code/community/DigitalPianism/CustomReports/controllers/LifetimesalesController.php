@@ -5,6 +5,11 @@
  */
 class DigitalPianism_CustomReports_LifetimesalesController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('report/customers/lifetimesales');
+    }
+
     public function indexAction()
     {
 		// Get the session

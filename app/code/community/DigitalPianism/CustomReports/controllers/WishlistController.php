@@ -5,6 +5,11 @@
  */
 class DigitalPianism_CustomReports_WishlistController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('report/wishlist');
+    }
+
     public function indexAction()
     {
 		// Get the session
