@@ -5,7 +5,9 @@ class DigitalPianism_CustomReports_Block_Bestsellersbycategory_Grid extends Mage
 	
 	public function __construct()
 	{
-		Mage_Adminhtml_Block_Widget_Grid::__construct();
+		parent::__construct();
+		$this->setPagerVisibility(false);
+		$this->setFilterVisibility(false);
 		$this->setId('bestsellersbycategoryReportGrid');
 	}
 	
@@ -65,16 +67,7 @@ class DigitalPianism_CustomReports_Block_Bestsellersbycategory_Grid extends Mage
 				$this->arrayBestSellers[$categoryID]['ordered_total'] += $sumTotal;
 			}
 			else
-			{
-				// For the categories called 'ALL' we need to add the parent category name 
-				if (strtolower($categoryName)=='all')
-				{
-					// Get the parent category Name
-					$parentCategoryName = Mage::getModel('catalog/category')->load($category['parent_id'])->getName();
-					// Add the parent category name 
-					$categoryName = $parentCategoryName . " > " . $categoryName;
-				}
-				
+			{				
 				// Else we create a new entry with the data
 				$this->arrayBestSellers[$categoryID] = array(
 					'name'			=>	$categoryName,
@@ -160,7 +153,7 @@ class DigitalPianism_CustomReports_Block_Bestsellersbycategory_Grid extends Mage
 		
 		$this->setCollection($collection);
 		
-		Mage_Adminhtml_Block_Widget_Grid::_prepareCollection();
+		parent::_prepareCollection();
 
 		return $this;
 	}
@@ -188,6 +181,6 @@ class DigitalPianism_CustomReports_Block_Bestsellersbycategory_Grid extends Mage
 		$this->addExportType('*/*/exportBestsellersbycategoryCsv', Mage::helper('reports')->__('CSV'));
 		$this->addExportType('*/*/exportBestsellersbycategoryExcel', Mage::helper('reports')->__('Excel'));
 
-		return Mage_Adminhtml_Block_Widget_Grid::_prepareColumns();
+		return parent::_prepareColumns();
 	}
 }

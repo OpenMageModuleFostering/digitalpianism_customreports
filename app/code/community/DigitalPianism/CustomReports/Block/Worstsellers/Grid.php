@@ -6,6 +6,8 @@ class DigitalPianism_CustomReports_Block_Worstsellers_Grid extends Mage_Adminhtm
     public function __construct()
     {
         parent::__construct();
+		$this->setPagerVisibility(false);
+		$this->setFilterVisibility(false);
         $this->setId('worstsellersReportGrid');
     }
 	

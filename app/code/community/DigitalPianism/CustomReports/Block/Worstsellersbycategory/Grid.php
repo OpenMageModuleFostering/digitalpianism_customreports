@@ -5,7 +5,9 @@ class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mag
 
     public function __construct()
     {
-        Mage_Adminhtml_Block_Widget_Grid::__construct();
+        parent::__construct();
+		$this->setPagerVisibility(false);
+		$this->setFilterVisibility(false);
         $this->setId('worstsellersbycategoryReportGrid');
     }
 	
@@ -173,16 +175,7 @@ class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mag
 					$arrayWorstSellers[$categoryID]['views'] += $views;
 				}
 				else
-				{
-					// For the categories called 'ALL' we need to add the parent category name 
-					if (strtolower($categoryName)=='all')
-					{
-						// Get the parent category Name
-						$parentCategoryName = Mage::getModel('catalog/category')->load($category['parent_id'])->getName();
-						// Add the parent category name 
-						$categoryName = $parentCategoryName . " > " . $categoryName;
-					}
-					
+				{					
 					// Else we create a new entry with the data
 					$arrayWorstSellers[$categoryID] = array(
 						'name'			=>	$categoryName,
@@ -215,7 +208,7 @@ class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mag
 		
         $this->setCollection($collection);
 		
-        Mage_Adminhtml_Block_Widget_Grid::_prepareCollection();
+        parent::_prepareCollection();
 
         return $this;
     }
@@ -243,7 +236,7 @@ class DigitalPianism_CustomReports_Block_Worstsellersbycategory_Grid extends Mag
         $this->addExportType('*/*/exportWorstsellersbycategoryCsv', Mage::helper('reports')->__('CSV'));
         $this->addExportType('*/*/exportWorstsellersbycategoryExcel', Mage::helper('reports')->__('Excel'));
 
-        return Mage_Adminhtml_Block_Widget_Grid::_prepareColumns();
+        return parent::_prepareColumns();
     }
 
 }
