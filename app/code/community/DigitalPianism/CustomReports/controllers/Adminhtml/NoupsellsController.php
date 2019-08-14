@@ -3,7 +3,7 @@
 /**
  * Class DigitalPianism_CustomReports_NoupsellsController
  */
-class DigitalPianism_CustomReports_NoupsellsController extends Mage_Adminhtml_Controller_Action
+class DigitalPianism_CustomReports_Adminhtml_NoupsellsController extends Mage_Adminhtml_Controller_Action
 {
     protected function _isAllowed()
     {

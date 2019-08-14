@@ -3,7 +3,7 @@
 /**
  * Class DigitalPianism_CustomReports_ShoppedonceController
  */
-class DigitalPianism_CustomReports_ShoppedonceController extends Mage_Adminhtml_Controller_Action
+class DigitalPianism_CustomReports_Adminhtml_ShoppedonceController extends Mage_Adminhtml_Controller_Action
 {
     protected function _isAllowed()
     {

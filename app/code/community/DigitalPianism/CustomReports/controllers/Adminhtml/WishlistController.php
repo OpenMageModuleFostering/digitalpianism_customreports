@@ -3,7 +3,7 @@
 /**
  * Class DigitalPianism_CustomReports_WishlistController
  */
-class DigitalPianism_CustomReports_WishlistController extends Mage_Adminhtml_Controller_Action
+class DigitalPianism_CustomReports_Adminhtml_WishlistController extends Mage_Adminhtml_Controller_Action
 {
     protected function _isAllowed()
     {

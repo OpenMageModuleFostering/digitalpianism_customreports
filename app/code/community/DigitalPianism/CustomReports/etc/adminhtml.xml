@@ -11,11 +11,11 @@
 					<children>
 						<bestsellersbycategory translate="title" module="reports">
 							<title>Bestsellers</title>
-							<action>customreports/bestsellersbycategory</action>
+							<action>adminhtml/bestsellersbycategory</action>
 						</bestsellersbycategory>
 						<worstsellersbycategory translate="title" module="reports">
 							<title>Worstsellers</title>
-							<action>customreports/worstsellersbycategory</action>
+							<action>adminhtml/worstsellersbycategory</action>
 						</worstsellersbycategory>
 					</children>
 				</categories>
@@ -24,11 +24,11 @@
 					<children>
 						<noupsells translate="title" module="reports">
 							<title>No Upsells</title>
-							<action>customreports/noupsells</action>
+							<action>adminhtml/noupsells</action>
 						</noupsells>
 						<worstsellers translate="title" module="reports">
 							<title>Worstsellers</title>
-							<action>customreports/worstsellers</action>
+							<action>adminhtml/worstsellers</action>
 						</worstsellers>
 					</children>
 				</products>
@@ -37,21 +37,21 @@
 					<children>
 						<lifetimesales translate="title" module="reports">
 							<title>Lifetime Sales</title>
-							<action>customreports/lifetimesales</action>
+							<action>adminhtml/lifetimesales</action>
 						</lifetimesales>
 						<shoppedonce translate="title" module="reports">
 							<title>Shopped Once And Never Again</title>
-							<action>customreports/shoppedonce</action>
+							<action>adminhtml/shoppedonce</action>
 						</shoppedonce>
 						<signedupnoorder translate="title" module="reports">
 							<title>Signed Up And Never Order</title>
-							<action>customreports/signedupnoorder</action>
+							<action>adminhtml/signedupnoorder</action>
 						</signedupnoorder>
 					</children>
 				</customers>
 				<wishlist translate="title" module="reports">
 					<title>Wishlist</title>
-					<action>customreports/wishlist</action>
+					<action>adminhtml/wishlist</action>
 				</wishlist>
 			</children>
 		</report>

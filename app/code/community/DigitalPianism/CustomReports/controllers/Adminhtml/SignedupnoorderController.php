@@ -3,7 +3,7 @@
 /**
  * Class DigitalPianism_CustomReports_SignedupnoorderController
  */
-class DigitalPianism_CustomReports_SignedupnoorderController extends Mage_Adminhtml_Controller_Action
+class DigitalPianism_CustomReports_Adminhtml_SignedupnoorderController extends Mage_Adminhtml_Controller_Action
 {
     protected function _isAllowed()
     {
