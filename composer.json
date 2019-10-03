@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/DigitalPianism_CustomReports",
+    "name": "OpenMageModuleFostering\/DigitalPianism_CustomReports",
     "type": "magento-module",
     "license": "Open-GPL",
     "homepage": "",
     "description": "Adds several custom reports to Magento.",
     "authors": [
-    {
-        "name": "Digital Pianism",
-        "email": "contact@digital-pianism.com"
-    }
-],
+        {
+            "name": "Digital Pianism",
+            "email": "contact@digital-pianism.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
